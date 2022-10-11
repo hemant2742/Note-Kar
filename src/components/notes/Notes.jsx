@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { Box, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { DragDropContext, Draggable, Droppable  } from 'react-beautiful-dnd';
-
 import { DataContext } from '../../context/DataProvider';
 import { reorder } from '../../utils/common-utils';
 
@@ -11,6 +10,7 @@ import { reorder } from '../../utils/common-utils';
 import Form from './Form';
 import Note from './Note';
 import EmptyNotes from './EmptyNotes';
+import Pinnotes  from './pinnote';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     ...theme.mixins.toolbar,

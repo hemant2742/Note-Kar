@@ -1,8 +1,8 @@
-
+import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
-// import {logo} from '@mui/icons-material';
+import NotesIcon from '../logo.png';
 
 
 const Header = styled(AppBar)`
@@ -28,12 +28,12 @@ const HeaderBar = ({ open, handleDrawer }) => {
       <Toolbar>
         <IconButton
           onClick={() => handleDrawer()}
-          sx={{ marginRight: '20px'}}
+          sx={{ marginRight: '10px'}}
           edge="start"
         >
           <Menu />
         </IconButton>
-        {/* <img src={jj.png} alt="logoss" style={{width: 40}} /> */}
+        <img src={NotesIcon} alt="logo" width={28} height={35}></img>
         <Heading>Note-Kar</Heading>
       </Toolbar>
     </Header>

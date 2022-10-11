@@ -10,8 +10,8 @@ const Container = styled(Box)`
     display: flex;
     flex-direction: column;
     margin: auto;
-    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-    border-color: #e0e040;
+    box-shadow: 0 3px 2px 0 rgb(60 64 67 / 50%), 0 3px 6px 2px rgb(60 64 67 / 30%);
+    border-color: black;
     width: 900px;
     border-radius: 8px;
     min-height: 90px;
@@ -23,6 +23,7 @@ const note = {
     heading: '',
     text: ''
 }
+
 
 const Form = () => {
 
@@ -42,7 +43,6 @@ const Form = () => {
             setNotes(prevArr => [addNote, ...prevArr])
         }
     }
-    
     const onTextAreaClick = () => {
         setShowTextField(true);
         containerRef.current.style.minheight = '70px'
@@ -52,7 +52,6 @@ const Form = () => {
         let changedNote = { ...addNote, [e.target.name]: e.target.value };
         setAddNote(changedNote);
     }
-
     return (
         <ClickAwayListener onClickAway={handleClickAway}>
             <Container ref={containerRef}>
@@ -67,6 +66,7 @@ const Form = () => {
                         value={addNote.heading}
                     />
                 }
+                
                 <TextField
                     placeholder="Take a note..."
                     multiline

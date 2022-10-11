@@ -17,7 +17,7 @@ const Container = styled(Box)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh
+    margin-top: 25vh
 `
 
 const EmptyNotes = () => {

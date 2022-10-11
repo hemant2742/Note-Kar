@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import {  DeleteOutlineOutlined as Delete } from '@mui/icons-material';
 
 import { DataContext } from '../../context/DataProvider';
+import Pinnotes from './pinnote';
 
 const StyledCard = styled(Card)`
     border: 1px solid #e0e0e0;
@@ -37,8 +38,15 @@ const Note = ({ note }) => {
                     <Delete 
                         fontSize="small"
                         onClick={() => deleteNote(note)}
+
                     />
                 </CardActions>
+                {/* <CardActions>
+                    <Pin>
+fontSize="small"
+onClick={ ()=>Pinnotes(note)}
+                    />
+                </CardActions> */}
         </StyledCard>
     )
 }
